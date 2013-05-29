@@ -10,5 +10,9 @@
             "name": "Joris de Wit",
             "email": "joris.dewit@wardell.biz"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": { "Wardell\\RouteResolverBundle": "" }
+    },
+    "target-dir": "Wardell/RouteResolverBundle"
 }
