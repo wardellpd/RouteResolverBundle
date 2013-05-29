@@ -1,0 +1,14 @@
+{
+    "name": "wardell/route-resolver-bundle",
+    "description": "Resolve routes based on a users role",
+    "require": {
+        "symfony/symfony": "2.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joris de Wit",
+            "email": "joris.dewit@wardell.biz"
+        }
+    ]
+}
