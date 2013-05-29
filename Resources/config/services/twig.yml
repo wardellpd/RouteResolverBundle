@@ -1,0 +1,4 @@
+services:
+  user.twig.extension:
+    class: Application\UserBundle\Twig\Extension\CustomExtension
+    arguments: ["@twig"]
