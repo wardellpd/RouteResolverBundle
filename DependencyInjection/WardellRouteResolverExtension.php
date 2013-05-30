@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\FileLocator;
 
-class RouteResolverExtension extends Extension
+class WardellRouteResolverExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container) {
 
@@ -25,5 +25,7 @@ class RouteResolverExtension extends Extension
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         $loader->load('services/twig.yml');
+
+		$container->setParameter('wardell_route_resolver_parameters', $config['roles']);
 	}
 }

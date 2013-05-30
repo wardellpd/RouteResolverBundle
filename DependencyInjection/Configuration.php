@@ -25,6 +25,13 @@ class Configuration
         $treeBuilder = new TreeBuilder();
         $treeBuilder->root('wardell_route_resolver', 'array')
             ->children()
+                ->arrayNode('roles')
+                    ->useAttributeAsKey('role')->prototype('array')
+                        ->children()
+                            ->scalarNode('affix')->end()
+                        ->end()
+                    ->end()
+                ->end()
             ->end()
         ->end();
 

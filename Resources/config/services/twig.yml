@@ -1,4 +1,6 @@
 services:
-  user.twig.extension:
-    class: Application\UserBundle\Twig\Extension\CustomExtension
-    arguments: ["@twig"]
+    wardell_route_resolver.twig.extension:
+        class: Wardell\RouteResolverBundle\Twig\Extension\RouteResolverExtension
+        arguments: ["@router", "@security.context","%wardell_route_resolver_parameters%"]
+        tags:
+            - { name: twig.extension }
